@@ -30,8 +30,8 @@
 function openProject() {
   const projectID = event.target.id;
   parts = projectID.match(/[a-zA-Z]+|[0-9]+/g);
-  scriptSource =`./projects/${parts[0]}/project${parts[1]}/script.js`;
-  const url =  `./project.html?scriptSource=${encodeURIComponent(scriptSource)}`;
+  scriptSource =`./projects/${parts[0]}/project${parts[1]}/index.html`;
+ // const url =  `./project.html?scriptSource=${encodeURIComponent(scriptSource)}`;
   window.location.href = url;
 }
 </script>
