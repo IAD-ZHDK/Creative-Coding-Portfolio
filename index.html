@@ -23,14 +23,14 @@
   <!-- Projects -->
   <section class="projects-container">
   </section>
-  <script src="script.js"></script>
+  <script src="./script/script.js"></script>
     
 </body>
 <script>
 function openProject() {
   const projectID = event.target.id;
   parts = projectID.match(/[a-zA-Z]+|[0-9]+/g);
-  scriptSource =`./src/projects/${parts[0]}/project${parts[1]}/script.js`;
+  scriptSource =`./projects/${parts[0]}/project${parts[1]}/script.js`;
   const url =  `./project.html?scriptSource=${encodeURIComponent(scriptSource)}`;
   window.location.href = url;
 }

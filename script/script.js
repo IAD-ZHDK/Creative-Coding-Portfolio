@@ -1,6 +1,3 @@
-//create code which will go through all projects in ./src/projects and create a new project card
-//for each section one in index.html
-
 var student;
 
 function createProjectCard() {
