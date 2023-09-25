@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <!-- Primary Meta Tags -->
-  <title>Name Surname CC HS23 </title>
+  <title>CC HS23 </title>
   <meta name="title" content="BA Interaction Design : Creative Coding Portfolio" />
   <link rel="icon" type="image/x-icon" href="favicon/favicon.ico" />
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
@@ -16,6 +16,7 @@
 </head>
 
 <body>
+   <!-- Student Name -->
   <section class="header-container">
     <h2>Name Surname</h2>
   </section>
@@ -23,15 +24,15 @@
   <!-- Projects -->
   <section class="projects-container">
   </section>
+
   <script src="./script/script.js"></script>
-    
 </body>
+
 <script>
 function openProject() {
   const projectID = event.target.id;
   parts = projectID.match(/[a-zA-Z]+|[0-9]+/g);
-  scriptSource =`./projects/${parts[0]}/project${parts[1]}/index.html`;
- // const url =  `./project.html?scriptSource=${encodeURIComponent(scriptSource)}`;
+  url =`./projects/${parts[0]}/project${parts[1]}/index.html`;
   window.location.href = url;
 }
 </script>

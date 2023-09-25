@@ -1,8 +1,21 @@
 var student;
+fetch("student.json")
+  .then((response) => {
+    if (!response.ok) {
+      throw new Error("Network response was not ok");
+    }
+    return response.json();
+  })
+  .then((data) => {
+    student = data;
+    createProjectCard();
+  })
+  .catch((error) => {
+    console.error("There was a problem fetching the data:", error);
+  });
 
 function createProjectCard() {
   document.querySelector(".header-container h2").innerHTML = student.name;
-
   for (let i = 0; i < student.projects.length; i++) {
     //loop through each project inside projects
     let section = document.createElement("section");
@@ -23,7 +36,7 @@ function createProjectCard() {
       //if needed change png to jpeg
       articles.push(`
             <div class="card" id="${childId}" onclick = "openProject()"
-             style = "background: url(./projects/${ student.projects[i].folder}/project${j + 1}/project.png) center center/cover">
+             style = "background: url(./projects/${student.projects[i].folder}/project${j + 1}/project.jpeg) center center/cover">
               <div class="project-info">
                 <div class="project-bio">
                   <h3>project${j + 1}</h3>
@@ -36,20 +49,5 @@ function createProjectCard() {
  
   }
 }
-
-fetch("student.json")
-  .then((response) => {
-    if (!response.ok) {
-      throw new Error("Network response was not ok");
-    }
-    return response.json();
-  })
-  .then((data) => {
-    student = data;
-    createProjectCard();
-  })
-  .catch((error) => {
-    console.error("There was a problem fetching the data:", error);
-  });
 
 

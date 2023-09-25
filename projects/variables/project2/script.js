@@ -1,4 +1,4 @@
-let len = 10;
+let len = 100;
 let bg;
 
 function setup() {
@@ -6,18 +6,18 @@ function setup() {
 	background(0);
 	frameRate(30);
 	rectMode(CENTER);
-	bg = color(10, 200, 58);
+	bg = color(200, 0, 58);
 }
 
 function  draw() {
 	background(bg);
 	noFill();
 	strokeWeight(5);
-	stroke(200,30, 140);
+	stroke(20,200, 140);
 	
-	rect(pmouseX, pmouseY, len, len)
+	circle(pmouseX, pmouseY, len)
   //height - mouseY mirrors the object along y axis
-	rect(pmouseX, height - pmouseY, len, len)
+  	circle(pmouseX, height - pmouseY, len)
 	//increase the lenght by 1px every frame
 	len++;
 	
