@@ -26,7 +26,6 @@ Please refer to the following instructions in order to set up your portfolio pag
 │   ├── projects
 │   │   ├── 01variables
 │   │   │   ├── project1 
-│   │   │   ├── project2
 │   │   │   ├── ....  
 │   │   ├── 02functions
 │   │   ├── 03conditionals
@@ -52,7 +51,7 @@ Depending on the number of projects you have, in each of the folder you have to 
 │   ├── project1
 │   │   ├── index.html
 │   │   ├── sketch.js
-│   │   ├── project.jpeg (.png or .jpg extension are also fine)
+│   │   ├── thumbnail.jpeg (.png or .jpg extension are also fine)
 ```
 
 Other files such as `style.css` are optional.
@@ -99,4 +98,4 @@ Copy your code from **openprocessing** inside of `sketch.js`.
 
 ## Adding images
 
-Please make sure that you add a screenshot of your sketch and name it **project.jpeg**. The extension of the image can be also **.png** or **.jpg**.
+Please make sure that you add a screenshot of your sketch and name it **thumbnail.jpeg**. The extension of the image can be also **.png** or **.jpg**.

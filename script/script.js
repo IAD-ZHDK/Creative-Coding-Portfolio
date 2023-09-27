@@ -36,7 +36,7 @@ function createProjectCard() {
       //if needed change png to jpeg
       articles.push(`
             <div class="card" id="${childId}" onclick = "openProject()"
-             style = "background: url(./projects/${student.projects[i].folder}/project${j + 1}/project.jpeg) center center/cover">
+             style = "background: url(./projects/${student.projects[i].folder}/project${j + 1}/thumbnail.jpeg) center center/cover">
               <div class="project-info">
                 <div class="project-bio">
                   <h3>project${j + 1}</h3>

@@ -2,11 +2,55 @@
     "name": "Max Muster",
     "projects": [ 
         {
-        "folder": "variables",
+        "folder": "01variables",
         "projectNumber": "3"
         },
         {
-        "folder" : "functions",
+        "folder" : "02functions",
+        "projectNumber":"3"
+        },
+        {
+        "folder" : "03conditionals",
+        "projectNumber":"3"
+        },
+        {
+        "folder" : "04loops",
+        "projectNumber":"3"
+        },
+        {
+        "folder" : "05arrays",
+        "projectNumber":"3"
+        },
+        {
+        "folder" : "06easing functions",
+        "projectNumber":"3"
+        },
+        {
+        "folder" : "07coordinate system",
+        "projectNumber":"3"
+        },
+        {
+        "folder" : "08oop",
+        "projectNumber":"3"
+        },
+        { 
+        "folder" : "09libraries",
+        "projectNumber":"3"
+        },
+        {
+        "folder" : "10vectors",
+        "projectNumber":"3"
+        },
+        {
+        "folder" : "11images",
+        "projectNumber":"3"
+        },
+        {
+        "folder" : "12other",
+        "projectNumber":"3"
+        },
+        {
+        "folder" : "13main assignments",
         "projectNumber":"3"
         }
   ]
