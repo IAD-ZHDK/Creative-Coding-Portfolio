@@ -1,3 +1,5 @@
+//*DO NOT CHANGE THIS FILE*//
+
 var student;
 fetch("student.json")
   .then((response) => {
@@ -20,7 +22,7 @@ function createProjectCard() {
     //loop through each project inside projects
     let section = document.createElement("section");
     let articles = [];
-    section.id = `${student.projects[i].folder}-projects`;
+    section.id = `${student.projects[i].folder}`;
     section.classList.add("project-container", "container");
     section.innerHTML = `
       <div class="division"></div>
@@ -31,7 +33,7 @@ function createProjectCard() {
     let article = document.createElement("article");
     article.classList.add("project");
 
-    for (let j = 0; j < student.projects[i].projectNumber; j++) {
+/*     for (let j = 0; j < student.projects[i].projectNumber; j++) {
       let childId = student.projects[i].folder + (j + 1);
       //if needed change png to jpeg
       articles.push(`
@@ -43,11 +45,39 @@ function createProjectCard() {
                 </div>
               </div>
             </div> `);
+      } */
+
+      for (let j = 0; j < student.projects[i].projectNumber; j++) {
+        let childId = student.projects[i].folder + (j + 1);
+        var t;
+        if (fileExists(`./projects/${student.projects[i].folder}/project${j + 1}/thumbnail.jpg`)) {
+          t = "thumbnail.jpg";
+        } else if (fileExists(`./projects/${student.projects[i].folder}/project${j + 1}/thumbnail.jpeg`)) {
+          t = "thumbnail.jpeg";
+        } else if (fileExists(`./projects/${student.projects[i].folder}/project${j + 1}/thumbnail.png`)) {
+          t = "thumbnail.png";
+        }
+
+        articles.push(`
+          <div class="card" id="${childId}" onclick="openProject()"
+            style="background: url(./projects/${student.projects[i].folder}/project${j + 1}/${t}) center center/cover">
+            <div class="project-info">
+              <div class="project-bio">
+                <h3>project${j + 1}</h3>
+              </div>
+            </div>
+          </div>
+        `);
       }
       article.innerHTML = articles.join("");
-      document.querySelector(`#${student.projects[i].folder}-projects`) .appendChild(article);
- 
+      document.querySelector(`[id="${student.projects[i].folder}"]`).appendChild(article);
   }
 }
 
+function fileExists(url) {
+  var http = new XMLHttpRequest();
+  http.open("HEAD", url, false);
+  http.send();
+  return http.status != 404;
+}
 

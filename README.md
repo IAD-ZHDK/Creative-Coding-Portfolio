@@ -98,4 +98,4 @@ Copy your code from **openprocessing** inside of `sketch.js`.
 
 ## Adding images
 
-Please make sure that you add a screenshot of your sketch and name it **thumbnail.jpeg**. The extension of the image can be also **.png** or **.jpg**.
+Please make sure that you add a screenshot of your sketch and name it **thumbnail**. The extension of the image must be **.jpeg**, **.png** or **.jpg**. You can ignore all **404 (Not Found)** that refer to thumbnail in the console.
