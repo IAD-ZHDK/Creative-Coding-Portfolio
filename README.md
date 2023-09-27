@@ -62,6 +62,7 @@ In student.json you have to add your personal information.
 
 ```bash
 "name": "Max Muster" *put your name here*
+"thumbnailExtension": "jpeg" *put the extension of ALL your thumbnails here*
     "projects": [ 
         {
         "folder": "01variables", 
@@ -98,4 +99,4 @@ Copy your code from **openprocessing** inside of `sketch.js`.
 
 ## Adding images
 
-Please make sure that you add a screenshot of your sketch and name it **thumbnail**. The extension of the image must be **.jpeg**, **.png** or **.jpg**. You can ignore all **404 (Not Found)** that refer to thumbnail in the console.
+Please make sure that you add a screenshot of your sketch and name it **thumbnail**. You can choose which extension your images have in `student.json`.

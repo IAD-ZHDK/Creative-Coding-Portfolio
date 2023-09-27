@@ -1,5 +1,6 @@
 {
     "name": "Max Muster",
+    "thumbnailExtension": "jpeg",
     "projects": [ 
         {
         "folder": "01variables",

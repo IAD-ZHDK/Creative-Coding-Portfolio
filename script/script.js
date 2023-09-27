@@ -50,17 +50,16 @@ function createProjectCard() {
       for (let j = 0; j < student.projects[i].projectNumber; j++) {
         let childId = student.projects[i].folder + (j + 1);
         var t;
-        if (fileExists(`./projects/${student.projects[i].folder}/project${j + 1}/thumbnail.jpg`)) {
+       /* if (fileExists(`./projects/${student.projects[i].folder}/project${j + 1}/thumbnail.jpg`)) {
           t = "thumbnail.jpg";
         } else if (fileExists(`./projects/${student.projects[i].folder}/project${j + 1}/thumbnail.jpeg`)) {
           t = "thumbnail.jpeg";
         } else if (fileExists(`./projects/${student.projects[i].folder}/project${j + 1}/thumbnail.png`)) {
           t = "thumbnail.png";
-        }
-
+        }*/
         articles.push(`
           <div class="card" id="${childId}" onclick="openProject()"
-            style="background: url(./projects/${student.projects[i].folder}/project${j + 1}/${t}) center center/cover">
+            style="background: url(./projects/${student.projects[i].folder}/project${j + 1}/thumbnail.${student.thumbnailExtension}) center center/cover">
             <div class="project-info">
               <div class="project-bio">
                 <h3>project${j + 1}</h3>
