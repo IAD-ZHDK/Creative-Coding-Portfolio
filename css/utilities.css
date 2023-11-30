@@ -38,8 +38,7 @@ h2::selection {
 }
 
 .content-text h1 {
-  font-size: 1.2rem;
-  line-height: 1.2;
+  font-size: 2rem;
   transition: 0.2s ease-in-out;
 }
 
@@ -59,7 +58,6 @@ h2::selection {
 }
 
 
-
 /* Media Queries */
 @media (max-width: 768px) {
   .header-container {
@@ -67,7 +65,7 @@ h2::selection {
     text-align: center;
   }
 
-  .content-text h2 {
-    font-size: 2.5rem;
+  .content-text h1 {
+    font-size: 1.2rem;
   }
 }

@@ -2,7 +2,7 @@ let len = 10;
 let bg;
 
 function setup() {
-	createCanvas(600, 600);
+	createCanvas(windowWidth,windowHeight);
 	background(0);
 	frameRate(30);
 	rectMode(CENTER);
@@ -13,7 +13,7 @@ function  draw() {
 	background(bg);
 	noFill();
 	strokeWeight(5);
-	stroke(200,30, 140);
+	stroke(20,250, 40);
 	
 	rect(pmouseX, pmouseY, len, len)
   //height - mouseY mirrors the object along y axis

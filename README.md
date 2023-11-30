@@ -24,21 +24,11 @@ Please refer to the following instructions in order to set up your portfolio pag
 │   ├── favicon
 │   │   ├── favicon.ico
 │   ├── projects
-│   │   ├── 01variables
+│   │   ├── 01main
 │   │   │   ├── project1 
-│   │   │   ├── ....  
-│   │   ├── 02functions
-│   │   ├── 03conditionals
-│   │   ├── 04loops
-│   │   ├── 05arrays
-│   │   ├── 06easing functions
-│   │   ├── 07coordinate system
-│   │   ├── 08oop
-│   │   ├── 09libraries
-│   │   ├── 10vectors
-│   │   ├── 11images
-│   │   ├── 12other
-│   │   ├── 13main assignments
+│   │   │       ├── ....  
+│   │   │   ├── project2 
+│   │   │       ├── ....  
 │   ├── script
 │   │   ├── script.js
 ├── README.md
@@ -65,7 +55,7 @@ In student.json you have to add your personal information.
 "thumbnailExtension": "jpeg" *put the extension of ALL your thumbnails here*
     "projects": [ 
         {
-        "folder": "01variables", 
+        "folder": "01main", 
         "projectNumber": "3" *put the number of projects you have in 01variables folder  
         },
         ....
