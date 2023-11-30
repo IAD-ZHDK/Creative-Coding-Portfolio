@@ -24,7 +24,7 @@ Please refer to the following instructions in order to set up your portfolio pag
 │   ├── favicon
 │   │   ├── favicon.ico
 │   ├── projects
-│   │   ├── 01main
+│   │   ├── 01MainAssignments
 │   │   │   ├── project1 
 │   │   │       ├── ....  
 │   │   │   ├── project2 
@@ -55,8 +55,8 @@ In student.json you have to add your personal information.
 "thumbnailExtension": "jpeg" *the extension of ALL your thumbnails*
     "projects": [ 
         {
-        "folder": "01main", 
-        "projectNumber": "3" *put the number of projects you have in 01variables folder  
+        "folder": "01MainAssignments", 
+        "projectNumber": "2" *change the number if you want to show more examples
         },
     ]      
 ```
@@ -64,10 +64,9 @@ In student.json you have to add your personal information.
 For example, if you created three subfolders like this, then you have to put the number **3** in the `projectNumber` field.
     
     ```bash
-    │   ├── 01variables
+    │   ├── 01main
     │   │   ├── project1
     │   │   ├── project2
-    │   │   ├── project3
     ```
 
 <div align="center">
