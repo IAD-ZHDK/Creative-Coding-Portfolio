@@ -81,7 +81,7 @@ For example, if you created three subfolders like this, then you have to put the
 - Give your project any name. This name will appear as the title when you open it in a new tab.
 
 Now you have a folder consiting of `index.html` and `sketch.js` files. Do not change anything in `index.html` except if you want to add external libraries or other DOM elements. 
-Copy your code from **openprocessing** inside of `sketch.js`.
+Copy your code from **openprocessing** inside of `sketch.js`. IMPORTANT! `index.html` does not have p5.sound library imported.
 
 Repeat this process for every project in each coding category.
 
