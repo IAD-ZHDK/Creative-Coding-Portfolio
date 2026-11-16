@@ -1,5 +1,5 @@
 <div align="center">
-    <h1>👨‍💻 Creative Coding Portfolio 👩‍💻</h1>
+    <h1>Creative Coding Portfolio</h1>
 </div>
  
 Please refer to the following instructions in order to set up your portfolio page for the Creative Coding course.
@@ -8,7 +8,7 @@ Please refer to the following instructions in order to set up your portfolio pag
 
 - Download [Github Desktop](https://desktop.github.com/)
 - Follow the instructions to create your [Github Pages website](https://pages.github.com/)
-- Download this respository by clicking on Code --> Download ZIP
+- Download this respository by clicking on Code -> Download ZIP
 - Move the files inside of this repository into your Github Pages respository named xyz.github.io, where xyz is your username
 - Commit and push the changes to your Github Pages repository using Github Desktop
 - Go to your Github Pages website and check if everything is working correctly
@@ -16,26 +16,24 @@ Please refer to the following instructions in order to set up your portfolio pag
 ## Repository Structure
 
 ```bash
-│   ├── index.html
-│   ├── student.json  
-│   ├── css
-│   │   ├── style.css
-│   │   ├── utilities.css
+│   ├── index.html          # split-screen intro page (links to the two projects)
+│   ├── fonts
+│   │   ├── Suisse.ttf       # custom font used by the intro page
 │   ├── favicon
 │   │   ├── favicon.ico
 │   ├── projects
-│   │   ├── 01MainAssignments
-│   │   │   ├── project1 
-│   │   │       ├── ....  
-│   │   │   ├── project2 
-│   │   │       ├── ....  
-│   ├── script
-│   │   ├── script.js
+│   │   ├── project1 
+│   │       ├── ....  
+│   │   ├── project2 
+│   │       ├── ....  
+├── AI.md                   # your AI-usage documentation (template provided)
 ├── README.md
 └── .gitignore
 ```
 
-Depending on the number of projects you have, in each of the folder you have to create a project subfolder. The subfolder should be named **project1, project2, etc**. Inside of each project subfolder, you should have the following files: **IMPORTANT! The files have to be named exactly as below:**
+The intro page (`index.html`) is a self-contained split-screen that links directly to the two projects. To change which projects it shows, or their labels, edit the two `<a class="half">` blocks in `index.html`.
+
+There are two project subfolders, **project1** and **project2**. Each one contains the following files: **IMPORTANT! The files have to be named exactly as below:**
 
 ```bash
 │   ├── project1
@@ -46,45 +44,30 @@ Depending on the number of projects you have, in each of the folder you have to 
 
 Other files such as `style.css` are optional.
 
-## JSON file
-
-In student.json you have to add your personal information.  
-
-```bash
-"name": "Max Muster" *your name *
-"thumbnailExtension": "jpeg" *the extension of ALL your thumbnails*
-    "projects": [ 
-        {
-        "folder": "01MainAssignments", 
-        "projectNumber": "2" *change the number if you want to show more examples
-        },
-    ]      
-```
-
-For example, if you created three subfolders like this, then you have to put the number **3** in the `projectNumber` field.
-    
-    ```bash
-    │   ├── 01main
-    │   │   ├── project1
-    │   │   ├── project2
-    ```
-
 <div align="center">
-    <h1>✨ p5.js Project Page ✨</h1>
+    <h1>Editing Your Projects</h1>
 </div>
 
-- Download [Visual Studio Code](https://code.visualstudio.com/download)
-- In order to create a project page, go to extensions tab in Visual Studio Code (in the panel on the left side) and search for **p5 Project Creator**. 
-- Install the extension.
-- Open projectXYZ folder, where XYZ is any number e.x 1
-- Inside of projectXYZ create a new p5.js project by pressing <kbd>cmd</kbd> +<kbd>⇧</kbd>+<kbd>p</kbd> (Mac) or <kbd>ctrl</kbd>+<kbd>shift</kbd>+<kbd>p</kbd> (Windows). In the pop-up window type **p5**. Select **Create P5 Project**. 
-- Give your project any name. This name will appear as the title when you open it in a new tab.
+Each project already has an `index.html` and a `script.js`. You only need to edit `script.js` — do not touch `index.html`.
 
-Now you have a folder consiting of `index.html` and `sketch.js` files. Do not change anything in `index.html` except if you want to add external libraries or other DOM elements. 
-Copy your code from **openprocessing** inside of `sketch.js`. IMPORTANT! `index.html` does not have p5.sound library imported.
+- **Edit `script.js`** — paste your sketch code (e.g. from **openprocessing**) into `script.js`. This is the only file you need to change.
+- **Add fonts and other assets** (images, `.csv` data, `.otf`/`.ttf` fonts, …) directly inside the same project folder, next to `script.js`, and reference them by file name in your code.
+- **Replace the thumbnail** — once your sketch looks the way you want, take a screenshot of it and save it over `thumbnail.png` in the project folder (keep the name `thumbnail.png`). This is the image shown for the project on the intro page.
 
-Repeat this process for every project in each coding category.
+<div align="center">
+    <h1>Documenting Your AI Usage</h1>
+</div>
 
-## Adding images
+Using AI tools is allowed — but you have to **document and explain how you used them**. There is one `AI.md` file at the top level of the repository, with a section for each project — just fill it in. If you did not use any AI tools for a project, say so under that project.
 
-Please make sure that you add a screenshot of your sketch and name it **thumbnail**. You can set the extension of your images `student.json`.
+In `AI.md`, briefly answer for each project:
+
+- **Which tools?** Name the AI tools you used (e.g. ChatGPT, Claude, GitHub Copilot, Midjourney, an image or sound generator, …).
+- **What for?** Describe where AI helped — generating ideas, writing or debugging code, creating visual/audio assets, explaining a concept, refactoring, etc.
+- **How?** Include the key prompts you used, or a short summary of the back-and-forth. Be specific enough that someone could follow your process.
+- **Your contribution.** Explain what *you* decided, changed, rejected, or built on top of the AI's output. What creative and technical choices were yours?
+- **Reflection.** One or two sentences: what worked well, what didn't, and what you learned about using AI as a creative tool.
+
+Be honest and specific. The goal is not to hide AI usage but to make your process transparent and to show your own creative and critical thinking.
+
+`AI.md` is a Markdown file. If you are unsure how to format text, headings, lists or links, see the [Markdown basic syntax guide](https://www.markdownguide.org/basic-syntax/).

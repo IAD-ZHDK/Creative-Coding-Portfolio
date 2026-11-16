@@ -1,40 +1,93 @@
-<!-- *DO NOT CHANGE THIS FILE* -->
-
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
   <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <!-- Primary Meta Tags -->
-  <title>CC HS25 </title>
+  <title>CC HS26 </title>
   <meta name="title" content="BA Interaction Design : Creative Coding Portfolio" />
   <link rel="icon" type="image/x-icon" href="favicon/favicon.ico" />
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
-    integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous" />
-  <link rel="stylesheet" href="css/style.css" />
-  <link rel="stylesheet" href="css/utilities.css" />
+  <style>
+    @font-face {
+      font-family: "Suisse";
+      src: url("fonts/Suisse.ttf") format("truetype");
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    html, body { height: 100%; }
+
+    body {
+      font-family: "Suisse", -apple-system, system-ui, sans-serif;
+    }
+
+    .split {
+      display: flex;
+      height: 100vh;
+      width: 100vw;
+    }
+
+    .half {
+      flex: 1;
+      position: relative;
+      cursor: pointer;
+      overflow: hidden;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    /* the zoomable background lives in its own layer */
+    .half::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background-image: inherit;
+      background-size: cover;
+      background-position: center;
+      transition: transform 0.6s ease;
+    }
+
+    .half:hover::before {
+      transform: scale(1.03);
+    }
+
+    .label {
+      position: relative;
+      z-index: 1;
+      color: #fff;
+      mix-blend-mode: difference;
+      font-size: 8rem;
+      font-weight: 800;
+      letter-spacing: 0.05em;
+      text-decoration: none;
+      pointer-events: none;
+      transition: transform 0.4s ease;
+    }
+
+    .half:hover .label {
+      transform: scale(1.05);
+    }
+
+    @media (max-width: 600px) {
+      .split { flex-direction: column; }
+      .label { font-size: 5rem; }
+    }
+  </style>
 </head>
 
 <body>
-   <!-- Student Name -->
-  <section class="header-container">
-    <h2>Name Surname</h2>
-  </section>
-
-  <!-- Projects -->
-  <section class="projects-container">
-  </section>
-
-  <script src="./script/script.js"></script>
+  <div class="split">
+    <a class="half" href="./projects/project1/index.html"
+       style="background-image: url('./projects/project1/thumbnail.png')">
+      <span class="label">Project 1</span>
+    </a>
+    <a class="half" href="./projects/project2/index.html"
+       style="background-image: url('./projects/project2/thumbnail.png')">
+      <span class="label">Project 2</span>
+    </a>
+  </div>
 </body>
-<script>
-function openProject() {
-  const projectID = event.target.id;
-  parts = projectID.match(/[a-zA-Z]+|[0-9]+/g);
-  url =`./projects/${parts[0]+parts[1]}/project${parts[2]}/index.html`;
-  window.location.href = url;
-}
-</script>
+
 </html>
